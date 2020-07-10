@@ -23,7 +23,7 @@ function submitComment() {
 
         const contentEL = document.createElement('div');
         contentEL.classList.add('comment-content');
-        contentEL.innerText = newComment;
+        contentEL.innerText = newComment; // newComment를 contentEL.innerHTML로 받게되면, XSS 보안공격을 받을수도 있습니다.
 
         const commentEL = document.createElement('div');
         commentEL.classList.add('comment-row');
